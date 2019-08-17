@@ -36,7 +36,7 @@ flake8: $(PY_SENTINAL)
 	$(FLAKE8) $(PY_DIRS) --max-complexity=$(MAX_COMPLEXITY) --exclude=*/migrations/*.py --extend-ignore=$(FLAKE8_IGNORE)
 
 runserver: $(PY_SENTINAL)
-	env FLASK_APP=hello.py flask run -h $(INTERFACE) -p $(RUNSERVER_PORT)
+	env FLASK_APP=jamesgatedublin.hello flask run -h $(INTERFACE) -p $(RUNSERVER_PORT)
 
 clean:
 	rm -rf $(VE)
